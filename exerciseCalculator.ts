@@ -40,11 +40,6 @@ function calculateExercises(target: number, ...hours: number[]): Exercise {
             ratingDescription = "Unknown rating";
     }
 
-    // let ratingDescription: string
-    // if (rating === 1) { ratingDescription = "Do better!" }
-    // if (rating === 2) { ratingDescription = "Close, try a little harder." }
-    // if (rating === 3) { ratingDescription = "You're close to your goal!" }
-
     const result: Exercise = {
         periodLength: periodLength,
         trainingDays: trainingDays,
