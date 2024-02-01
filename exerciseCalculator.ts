@@ -5,24 +5,24 @@ interface Exercise {
     rating: number,
     ratingDescription: string,
     target: number,
-    average: number
+    average: number;
 }
 
 
 function calculateExercises(target: number, ...hours: number[]): Exercise {
 
 
-    const periodLength: number = hours.length
-    const trainingDays: number = (hours.filter(day => day > 0)).length
-    const average: number = hours.reduce((accumulator, currentValue) => accumulator + currentValue) / periodLength
-    const success: boolean = average > target
+    const periodLength: number = hours.length;
+    const trainingDays: number = (hours.filter(day => day > 0)).length;
+    const average: number = hours.reduce((accumulator, currentValue) => accumulator + currentValue) / periodLength;
+    const success: boolean = average > target;
 
-    let rating: number
+    let rating: number;
     if (average / target > 2 / 3) {
-        rating = 3
+        rating = 3;
     } else if (average / target < 1 / 3) {
-        rating = 1
-    } else { rating = 2 }
+        rating = 1;
+    } else { rating = 2; }
 
 
     let ratingDescription: string;
@@ -48,16 +48,16 @@ function calculateExercises(target: number, ...hours: number[]): Exercise {
         ratingDescription: ratingDescription,
         target: target,
         average: average
-    }
+    };
     console.log(result);
 
-    return result
+    return result;
 }
 
 
-const target: number = Number(process.argv[2])
-const hours: number[] = (process.argv.slice(3)).map(item => Number(item))
+const target: number = Number(process.argv[2]);
+const hours: number[] = (process.argv.slice(3)).map(item => Number(item));
 
 
 
-calculateExercises(target, ...hours)
+calculateExercises(target, ...hours);

@@ -1,1 +1,1 @@
-https://fullstackopen.com/en/part9/first_steps_with_type_script#adding-express-to-the-mix
+https://fullstackopen.com/en/part9/first_steps_with_type_script#exercises-9-6-9-7
