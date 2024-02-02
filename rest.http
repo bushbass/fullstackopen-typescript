@@ -1,0 +1,11 @@
+###
+POST http://localhost:3003/calculate HTTP/1.1
+content-type: application/json
+
+{"value1":"5","value2":"10","op":"multiply"}
+
+###
+POST http://localhost:3003/exercises HTTP/1.1
+content-type: application/json
+{"daily_exercises": [1, 0, 2, 0, 3, 0, 2.5],
+  "target": "2.5"}

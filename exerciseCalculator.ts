@@ -9,12 +9,13 @@ interface Exercise {
 }
 
 
-function calculateExercises(target: number, ...hours: number[]): Exercise {
+export function calculateExercises(target: number, hours: number[]): Exercise {
 
+    console.log(hours, "hours");
 
     const periodLength: number = hours.length;
     const trainingDays: number = (hours.filter(day => day > 0)).length;
-    const average: number = hours.reduce((accumulator, currentValue) => accumulator + currentValue) / periodLength;
+    const average: number = hours.reduce((accumulator, currentValue) => accumulator + currentValue, 0) / periodLength;
     const success: boolean = average > target;
 
     let rating: number;
@@ -60,4 +61,4 @@ const hours: number[] = (process.argv.slice(3)).map(item => Number(item));
 
 
 
-calculateExercises(target, ...hours);
+calculateExercises(target, hours);
